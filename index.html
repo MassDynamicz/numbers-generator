@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Генерация диапазона чисел</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section>
+    <div id="generator" class="content">
+      <h2>Генерация диапазона чисел</h2>
+      <div class="form-row">
+        <input type="text" placeholder="Введите первое число" id="first_number">
+        <input type="text" placeholder="Введите последнее число" id="last_number">
+        <input type="text" placeholder="Максимальное число" id="max_number">
+      </div>
+      <div class="form-row">
+        <div class="checkbox">
+          <input type="checkbox" id="reverseGenerateList">
+          <label for="reverseGenerateList">Обратный порядок генерации</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="excludeNumbers">
+          <label for="excludeNumbers">Исключить числа из результата</label>
+        </div>
+      </div>
+      <textarea id="excludeList" placeholder="Введите числа через запятую, которые хотите исключить"
+        class="slide-toggle"></textarea>
+      <button onclick="generateListNumbers()">Сгенерировать список чисел</button>
+    </div>
+
+    <div id="result" class="content">
+      <h2>Результат</h2>
+      <div class="result-container">
+        <textarea type="text" id="resultListNumbers" readonly></textarea>
+        <button id="copyButton">Скопировать результат</button>
+      </div>
+    </div>
+
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
